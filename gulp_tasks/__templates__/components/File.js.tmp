@@ -1,0 +1,16 @@
+import './${name}.less';
+import React from 'react';  // eslint-disable-line no-unused-vars
+
+class ${name} {
+
+    static propTypes = {
+    };
+
+    render() {
+        return (
+            <p>Hello ${name} component</p>
+        );
+    }
+}
+
+export default ${name};
