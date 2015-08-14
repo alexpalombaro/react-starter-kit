@@ -22,8 +22,8 @@
     "jade": "^1.9.2",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
+    "react": "^0.14.0-beta3",
+    "react-router": "^1.0.0-beta3",
     "superagent": "^1.2.0"
   },
   "devDependencies": {
@@ -37,8 +37,7 @@
     "eslint": "^1.1.0",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.0.0",
-    "git-push": "^0.1.1",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-cache": "^0.2.8",
     "gulp-changed": "^1.2.1",
@@ -80,6 +79,7 @@
   "scripts": {
     "start": "gulp",
     "test": "eslint src gulpfile.js webpack.config.js && jest",
+    "jest-run": "jest",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update"
   }

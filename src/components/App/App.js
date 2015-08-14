@@ -16,6 +16,7 @@ class App {
     return (
       <div className="App">
         <Navbar />
+        {}
         <div className="navbar-footer">
           <div className="container">
             <p className="text-muted">

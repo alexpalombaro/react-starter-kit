@@ -1,19 +1,11 @@
 import React from 'react';
-import { Route, NotFoundRoute, DefaultRoute } from 'react-router';
-import App from '../components/App';
-import NotFoundPage from '../components/NotFoundPage';
-//import About from '../components/About';
-//import Project from '../components/Project';
-
-/*
-        <DefaultRoute name="home" handler={About}/>
-        <Route name="about" handler={About}/>
-        <Route name="project" path="/:projectId" handler={Project}/>
-*/
+import { Route } from 'react-router';
+import { App, HomePage, NotFoundPage } from '../components';
 
 const routes = (
     <Route handler={App}>
-        <NotFoundRoute handler={NotFoundPage}/>
+      <Route path="home" handler={HomePage}/>
+      <Route path="/*" handler={NotFoundPage}/>
     </Route>
 );
 

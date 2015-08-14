@@ -1,10 +1,8 @@
-import keyMirror from 'react/lib/keyMirror';
+export default {
 
-export default keyMirror({
+  LOAD_PAGE: 'LOAD_PAGE',
+  LOAD_PAGE_SUCCESS: 'LOAD_PAGE_SUCCESS',
+  LOAD_PAGE_ERROR: 'LOAD_PAGE_ERROR',
+  CHANGE_LOCATION: "CHANGE_LOCATION"
 
-  LOAD_PAGE: null,
-  LOAD_PAGE_SUCCESS: null,
-  LOAD_PAGE_ERROR: null,
-  CHANGE_LOCATION: null
-
-});
+}

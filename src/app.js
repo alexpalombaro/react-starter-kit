@@ -1,11 +1,12 @@
 import 'babel/polyfill';
 
-import React from 'react/addons';
+import React from 'react';
 import FastClick from 'fastclick';
 import AppActions from './actions/AppActions';
 import Global from './constants/Globals';
 
-import Router from 'react-router';
+import { Router } from 'react-router';
+import { History } from 'react-router/lib/History';
 import routes from './routes';
 
 import debug from 'debug';
@@ -34,9 +35,7 @@ function run() {
     onSetMeta: setMetaTag
   };
 
-  Router.run(routes, Router.HistoryLocation, (Root) => {
-    React.render(<Root {...props}/>, document.getElementById('AppContainer'));
-  });
+  React.render(<Router children={routes} history={History}/>, document.getElementById('AppContainer'));
 }
 
 new Promise((resolve) => {
@@ -46,12 +45,12 @@ new Promise((resolve) => {
     window.attachEvent('onload', resolve);
   }
 }).then(() => {
-  FastClick.attach(document.body);
-  //window.addEventListener('scroll', AppActions.pageScroll);
-  //window.addEventListener('resize', AppActions.resize);
-  return AppActions.initialise();
-}).then(() => {
-  run();
-}).catch((err) => {
-  console.error(err);
-});
+    FastClick.attach(document.body);
+    //window.addEventListener('scroll', AppActions.pageScroll);
+    //window.addEventListener('resize', AppActions.resize);
+    return AppActions.initialise();
+  }).then(() => {
+    run();
+  }).catch((err) => {
+    console.error(err);
+  });

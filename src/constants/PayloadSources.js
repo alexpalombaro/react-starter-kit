@@ -1,8 +1,6 @@
-import keyMirror from 'react/lib/keyMirror';
+export default {
 
-export default keyMirror({
+  VIEW_ACTION: 'VIEW_ACTION',
+  SERVER_ACTION: 'SERVER_ACTION'
 
-  VIEW_ACTION: null,
-  SERVER_ACTION: null
-
-});
+};
